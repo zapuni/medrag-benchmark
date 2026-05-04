@@ -1,0 +1,351 @@
+Loaded 1,000 documents from cache
+Batches:   0%|          | 0/2 [00:00<?, ?it/s]Batches:  50%|█████     | 1/2 [00:00<00:00,  2.06it/s]Batches: 100%|██████████| 2/2 [00:00<00:00,  2.92it/s]Batches: 100%|██████████| 2/2 [00:00<00:00,  2.75it/s]
+Computing ground truth (Flat)...
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+WARNING clustering 1000 points to 256 centroids: please provide at least 9984 training points
+Saved: results/csv/benchmark_N1000.csv
+choreographer.browsers.chromium.ChromeNotFoundError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/plotly/io/_kaleido.py", line 398, in to_image
+    img_bytes = kaleido.calc_fig_sync(
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/kaleido/__init__.py", line 171, in calc_fig_sync
+    return _sync_server.oneshot_async_run(calc_fig, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/kaleido/_sync_server.py", line 131, in oneshot_async_run
+    raise res
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/kaleido/_sync_server.py", line 122, in run
+    q.put(asyncio.run(func(*args, **kwargs)))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/kaleido/__init__.py", line 101, in calc_fig
+    async with Kaleido(**kopts) as k:
+               ^^^^^^^^^^^^^^^^
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/kaleido/kaleido.py", line 164, in __init__
+    raise ChromeNotFoundError(
+choreographer.browsers.chromium.ChromeNotFoundError: Kaleido v1 and later requires Chrome to be installed. To install Chrome, use the CLI command `kaleido_get_chrome`, or from Python, use either `kaleido.get_chrome()` or `kaleido.get_chrome_sync()`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/giapcn/medrag/scripts/run_benchmark.py", line 79, in <module>
+    main()
+  File "/workspace/giapcn/medrag/scripts/run_benchmark.py", line 62, in main
+    reporter.plot_latency_vs_recall(
+  File "/workspace/giapcn/medrag/src/rag_benchmark/benchmark/reporter.py", line 52, in plot_latency_vs_recall
+    fig.write_image(str(img_path))
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/plotly/basedatatypes.py", line 3895, in write_image
+    return pio.write_image(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/plotly/io/_kaleido.py", line 528, in write_image
+    img_data = to_image(
+               ^^^^^^^^^
+  File "/workspace/giapcn/medrag/.venv/lib/python3.12/site-packages/plotly/io/_kaleido.py", line 410, in to_image
+    raise RuntimeError(PLOTLY_GET_CHROME_ERROR_MSG)
+RuntimeError: 
+
+Kaleido requires Google Chrome to be installed.
+
+Either download and install Chrome yourself following Google's instructions for your operating system,
+or install it from your terminal by running:
+
+    $ plotly_get_chrome
+
+

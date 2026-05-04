@@ -1,0 +1,1 @@
+Pipeline đơn giản: nhúng text thành vector, lưu vào FAISS index, tìm kiếm ANN nhanh chóng.

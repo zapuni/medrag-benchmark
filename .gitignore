@@ -1,0 +1,18 @@
+.venv/
+
+.env
+
+# Data
+/data/raw/
+/data/processed/
+/indexes/
+
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+.ipynb_checkpoints/
+
+.DS_Store
+Thumbs.db
