@@ -4,11 +4,14 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import faiss
+from tqdm import tqdm
 
 from rag_benchmark.adapters.embedding.sentence_transformer_adapter import SentenceTransformerAdapter
 from rag_benchmark.benchmark.params import get_optimal_params
 from rag_benchmark.benchmark.reporter import BenchmarkReporter
 from rag_benchmark.benchmark.runner import BenchmarkRunner
+from rag_benchmark.benchmark.multi_gpu_runner import MultiGPUBenchmarkRunner
 from rag_benchmark.config.settings import settings
 from rag_benchmark.data.dataset_loader import load_medrag_wikipedia
 
@@ -36,7 +39,6 @@ def main() -> None:
     query_ids = rng.choice(len(embeddings), args.n_queries, replace=False)
     query_embeddings = embeddings[query_ids]
 
-    runner = BenchmarkRunner(embeddings, query_embeddings, k=args.k)
     results = []
 
     params = get_optimal_params(n=len(embeddings), dimension=embedder.dimension)
@@ -48,22 +50,35 @@ def main() -> None:
         f"efS={params.ef_search_values}"
     )
 
-    results.append(runner.benchmark_flat())
-
-    for ef_search in params.ef_search_values:
-        results.append(
-            runner.benchmark_hnsw(
-                M=params.M_hnsw,
-                ef_search=ef_search,
-                ef_construction=params.ef_construction,
-            )
+    n_gpus = faiss.get_num_gpus()
+    if n_gpus >= 2 and len(embeddings) >= 1_000_000:
+        runner = MultiGPUBenchmarkRunner(
+            embeddings=embeddings,
+            query_embeddings=query_embeddings,
+            params=params,
+            gpu_ids=settings.faiss.gpu_ids,
         )
+        results.extend(runner.run())
+    else:
+        runner = BenchmarkRunner(embeddings, query_embeddings, k=args.k)
+        results.append(runner.benchmark_flat())
 
-    for nprobe in params.nprobe_values:
-        results.append(runner.benchmark_ivf(nlist=params.nlist, nprobe=nprobe))
+        for ef_search in tqdm(params.ef_search_values, desc="HNSW sweep"):
+            results.append(
+                runner.benchmark_hnsw(
+                    M=params.M_hnsw,
+                    ef_search=ef_search,
+                    ef_construction=params.ef_construction,
+                )
+            )
 
-    for nprobe in params.nprobe_values:
-        results.append(runner.benchmark_ivfpq(nlist=params.nlist, M_pq=params.M_pq, nprobe=nprobe))
+        for nprobe in tqdm(params.nprobe_values, desc="IVF sweep"):
+            results.append(runner.benchmark_ivf(nlist=params.nlist, nprobe=nprobe))
+
+        for nprobe in tqdm(params.nprobe_values, desc="IVFPQ sweep"):
+            results.append(
+                runner.benchmark_ivfpq(nlist=params.nlist, M_pq=params.M_pq, nprobe=nprobe)
+            )
 
     if args.report:
         df = pd.DataFrame([r.model_dump() for r in results])

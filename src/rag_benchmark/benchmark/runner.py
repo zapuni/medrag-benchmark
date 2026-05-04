@@ -1,6 +1,7 @@
 import time
 
 import numpy as np
+from tqdm import tqdm
 
 from ..indexing.flat_index import FlatIndexBuilder
 from ..indexing.hnsw_index import HNSWIndexBuilder
@@ -27,10 +28,10 @@ class BenchmarkRunner:
         _, labels = flat.search(self.query_embeddings, self.k)
         return labels
 
-    def _benchmark_search(self, search_fn):
+    def _benchmark_search(self, search_fn, desc: str):
         times = []
         all_labels = []
-        for q in self.query_embeddings:
+        for q in tqdm(self.query_embeddings, desc=desc, unit="q"):
             t0 = time.perf_counter()
             _, labels = search_fn(q.reshape(1, -1))
             times.append((time.perf_counter() - t0) * 1000)
@@ -39,7 +40,7 @@ class BenchmarkRunner:
 
     def benchmark_flat(self) -> BenchmarkResult:
         flat = FlatIndexBuilder(self.dimension).build(self.embeddings)
-        times, _ = self._benchmark_search(lambda q: flat.search(q, self.k))
+        times, _ = self._benchmark_search(lambda q: flat.search(q, self.k), desc="Flat search")
         return BenchmarkResult(
             index_type="Flat",
             n_vectors=self.n_vectors,
@@ -58,7 +59,8 @@ class BenchmarkRunner:
             self.embeddings
         )
         times, retrieved = self._benchmark_search(
-            lambda q: index.search(q, self.k, ef_search=ef_search)
+            lambda q: index.search(q, self.k, ef_search=ef_search),
+            desc=f"HNSW search (ef={ef_search})",
         )
         recall = compute_recall_at_k(retrieved, self._ground_truth, self.k)
         return BenchmarkResult(
@@ -74,7 +76,10 @@ class BenchmarkRunner:
 
     def benchmark_ivf(self, nlist: int = 100, nprobe: int = 10) -> BenchmarkResult:
         index = IVFIndexBuilder(self.dimension, nlist=nlist).build(self.embeddings, nprobe=nprobe)
-        times, retrieved = self._benchmark_search(lambda q: index.search(q, self.k, nprobe=nprobe))
+        times, retrieved = self._benchmark_search(
+            lambda q: index.search(q, self.k, nprobe=nprobe),
+            desc=f"IVF search (nprobe={nprobe})",
+        )
         recall = compute_recall_at_k(retrieved, self._ground_truth, self.k)
         return BenchmarkResult(
             index_type="IVF",
@@ -91,7 +96,10 @@ class BenchmarkRunner:
         index = IVFPQIndexBuilder(self.dimension, nlist=nlist, M_pq=M_pq).build(
             self.embeddings, nprobe=nprobe
         )
-        times, retrieved = self._benchmark_search(lambda q: index.search(q, self.k, nprobe=nprobe))
+        times, retrieved = self._benchmark_search(
+            lambda q: index.search(q, self.k, nprobe=nprobe),
+            desc=f"IVF+PQ search (nprobe={nprobe})",
+        )
         recall = compute_recall_at_k(retrieved, self._ground_truth, self.k)
         return BenchmarkResult(
             index_type="IVF+PQ",

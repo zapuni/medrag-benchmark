@@ -15,16 +15,20 @@ class BenchmarkParams:
 
 
 def get_optimal_params(n: int, dimension: int = 384) -> BenchmarkParams:
-    if n < 1_000_000:
-        nlist = max(4, min(int(4 * math.sqrt(n)), n // 39))
+    if n <= 10_000:
+        nlist = max(25, int(4 * math.sqrt(n)))
+    elif n <= 100_000:
+        nlist = max(100, int(4 * math.sqrt(n)))
     else:
-        nlist = max(4, min(int(16 * math.sqrt(n)), n // 39))
+        nlist = 4096
+
+    nlist = min(nlist, n // 39)
 
     max_nprobe = min(nlist, 512)
     nprobe_values = sorted({1, 4, 8, 16, 32, 64, 128, 256, 512, nlist})
     nprobe_values = [v for v in nprobe_values if v <= max_nprobe]
 
-    max_M_pq = min(48, dimension // 4)
+    max_M_pq = dimension // 4
     candidates = [
         m
         for m in [16, 24, 32, 48, 64, 96, 128]
@@ -35,8 +39,15 @@ def get_optimal_params(n: int, dimension: int = 384) -> BenchmarkParams:
         M_pq = candidates[len(candidates) // 3] if candidates else 16
     elif n < 100_000:
         M_pq = candidates[len(candidates) // 2] if candidates else 32
-    else:
+    elif n < 1_000_000:
         M_pq = candidates[-1] if candidates else 48
+    else:
+        if 96 in candidates:
+            M_pq = 96
+        elif 48 in candidates:
+            M_pq = 48
+        else:
+            M_pq = candidates[-1] if candidates else 48
 
     if n < 10_000:
         M_hnsw, ef_construction = 16, 100
@@ -45,7 +56,7 @@ def get_optimal_params(n: int, dimension: int = 384) -> BenchmarkParams:
     elif n < 1_000_000:
         M_hnsw, ef_construction = 48, 200
     else:
-        M_hnsw, ef_construction = 64, 400
+        M_hnsw, ef_construction = 48, 200
 
     max_ef = min(512, n)
     ef_search_values = sorted({16, 32, 64, 128, 256, 512})
