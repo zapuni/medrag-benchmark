@@ -1,3 +1,4 @@
+import gc
 import threading
 import time
 from typing import Optional
@@ -129,6 +130,15 @@ def _set_gpu_nprobe(index, nprobe: int) -> None:
             return
 
 
+def _free_gpu_objects(*objs) -> None:
+    for obj in objs:
+        try:
+            del obj
+        except Exception:
+            pass
+    gc.collect()
+
+
 class MultiGPUBenchmarkRunner:
     def __init__(
         self,
@@ -191,6 +201,7 @@ class MultiGPUBenchmarkRunner:
         )
 
         del flat_gpu, flat_cpu
+        _free_gpu_objects(res)
 
         print(f"[GPU{gpu_id}] Building HNSW M={self.params.M_hnsw}, efC={self.params.ef_construction}")
         faiss.omp_set_num_threads(settings.benchmark.hnsw_threads)
@@ -265,6 +276,7 @@ class MultiGPUBenchmarkRunner:
             )
 
         del ivf_gpu, ivf_cpu
+        _free_gpu_objects(res)
 
         ivfpq_cpu, safe_nlist = _train_ivfpq_gpu(
             self.embeddings,
@@ -318,6 +330,8 @@ class MultiGPUBenchmarkRunner:
                     n_queries=self.n_queries,
                 )
             )
+
+            _free_gpu_objects(ivfpq_gpu, ivfpq_cpu, res2)
 
     def run(self) -> list[BenchmarkResult]:
         print("Starting multi-GPU benchmark")

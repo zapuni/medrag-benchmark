@@ -5,6 +5,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import faiss
+import torch
 from tqdm import tqdm
 
 from rag_benchmark.adapters.embedding.sentence_transformer_adapter import SentenceTransformerAdapter
@@ -34,6 +35,10 @@ def main() -> None:
     documents, texts = load_medrag_wikipedia(max_samples=args.n_samples, cache_path=args.cache_path)
     embedder = SentenceTransformerAdapter()
     embeddings = embedder.encode(texts)
+    dimension = embedder.dimension
+    del embedder
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
     rng = np.random.default_rng(seed=42)
     query_ids = rng.choice(len(embeddings), args.n_queries, replace=False)
@@ -41,7 +46,7 @@ def main() -> None:
 
     results = []
 
-    params = get_optimal_params(n=len(embeddings), dimension=embedder.dimension)
+    params = get_optimal_params(n=len(embeddings), dimension=dimension)
     print(
         "Auto params: "
         f"nlist={params.nlist}, nprobe={params.nprobe_values}, "
@@ -51,7 +56,7 @@ def main() -> None:
     )
 
     n_gpus = faiss.get_num_gpus()
-    if n_gpus >= 2 and len(embeddings) >= 1_000_000:
+    if n_gpus >= 2:
         runner = MultiGPUBenchmarkRunner(
             embeddings=embeddings,
             query_embeddings=query_embeddings,
@@ -101,6 +106,8 @@ def main() -> None:
         )
 
     print("Benchmark complete.")
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
 
 if __name__ == "__main__":

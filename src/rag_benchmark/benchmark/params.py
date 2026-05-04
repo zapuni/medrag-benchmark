@@ -42,12 +42,7 @@ def get_optimal_params(n: int, dimension: int = 384) -> BenchmarkParams:
     elif n < 1_000_000:
         M_pq = candidates[-1] if candidates else 48
     else:
-        if 96 in candidates:
-            M_pq = 96
-        elif 48 in candidates:
-            M_pq = 48
-        else:
-            M_pq = candidates[-1] if candidates else 48
+        M_pq = 48 if 48 in candidates else (candidates[-1] if candidates else 48)
 
     if n < 10_000:
         M_hnsw, ef_construction = 16, 100
