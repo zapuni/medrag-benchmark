@@ -97,3 +97,17 @@ PYTHONUNBUFFERED=1 timeout --signal=SIGINT 12h uv run python scripts/run_benchma
 	--report \
 	2>&1 | tee logs/run_benchmark_1M.log
 ```
+
+Tôi đã cập nhật và chạy lại toàn bộ các thí nghiệm với máy GPU, hãy nhận xét và PoT ra .md  báo cáo so sánh hiệu năng chuyên nghiệp và ngắn gọn (cho bài tập về nhà, có cả ảnh trực quan để giải thích, ...) cho tôi, theo đúng yêu cầu :"""
+So sánh
+• Flat vs HNSW • IVF vs IVF+PQ
+
+Đo lường
+• latency • recall@k
+
+Gợi ý
+• Dùng cùng một dataset
+• Đo với N = 10K, 100K, 1M
+• Thay đổi M, efSearch
+• Plot latency vs recall
+"""

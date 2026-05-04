@@ -74,32 +74,18 @@ def _train_ivf_gpu(
     return cpu_index, safe_nlist
 
 
-def _train_ivfpq_gpu(
+def _train_ivfpq_cpu(
     embeddings: np.ndarray,
     nlist: int,
     M_pq: int,
     nbits: int,
     dimension: int,
-    gpu_id: int,
 ) -> tuple[faiss.IndexIVFPQ, int]:
-    res = _make_gpu_res(gpu_id, settings.faiss.temp_memory_mb)
     n = len(embeddings)
     safe_nlist = min(nlist, n // 39)
 
-    print(
-        f"[GPU{gpu_id}] IVFPQ clustering: {n:,} vectors -> {safe_nlist} centroids, M_pq={M_pq}"
-    )
-    clus = faiss.Clustering(dimension, safe_nlist)
-    clus.verbose = False
-    clus.niter = settings.faiss.kmeans_niter
-    clus.max_points_per_centroid = settings.faiss.kmeans_max_points_per_centroid
-
-    flat_gpu = faiss.GpuIndexFlatIP(res, dimension)
-    clus.train(embeddings, flat_gpu)
-
-    centroids = faiss.vector_float_to_array(clus.centroids).reshape(safe_nlist, dimension)
+    print(f"[CPU] IVFPQ training: {n:,} vectors -> {safe_nlist} centroids, M_pq={M_pq}")
     quantizer = faiss.IndexFlatIP(dimension)
-    quantizer.add(centroids)
 
     cpu_index = faiss.IndexIVFPQ(
         quantizer,
@@ -109,7 +95,7 @@ def _train_ivfpq_gpu(
         nbits,
         faiss.METRIC_INNER_PRODUCT,
     )
-    cpu_index.is_trained = True
+    cpu_index.train(embeddings)
     cpu_index.add(embeddings)
     return cpu_index, safe_nlist
 
@@ -278,33 +264,18 @@ class MultiGPUBenchmarkRunner:
         del ivf_gpu, ivf_cpu
         _free_gpu_objects(res)
 
-        ivfpq_cpu, safe_nlist = _train_ivfpq_gpu(
+        ivfpq_cpu, safe_nlist = _train_ivfpq_cpu(
             self.embeddings,
             self.params.nlist,
             self.params.M_pq,
             self.params.nbits,
             self.dimension,
-            gpu_id,
         )
 
-        if self.params.M_pq > 48:
-            gpu_config = faiss.GpuIndexIVFPQConfig()
-            gpu_config.useFloat16LookupTables = True
-            gpu_config.device = gpu_id
-            res2 = _make_gpu_res(gpu_id, settings.faiss.temp_memory_mb)
-            ivfpq_gpu = faiss.GpuIndexIVFPQ(
-                res2,
-                self.dimension,
-                safe_nlist,
-                self.params.M_pq,
-                self.params.nbits,
-                faiss.METRIC_INNER_PRODUCT,
-                gpu_config,
-            )
-            ivfpq_gpu.copyFrom(ivfpq_cpu)
-        else:
-            res2 = _make_gpu_res(gpu_id, settings.faiss.temp_memory_mb)
-            ivfpq_gpu = faiss.index_cpu_to_gpu(res2, gpu_id, ivfpq_cpu)
+        res2 = _make_gpu_res(gpu_id, settings.faiss.temp_memory_mb)
+        cloner = faiss.GpuClonerOptions()
+        cloner.useFloat16 = False
+        ivfpq_gpu = faiss.index_cpu_to_gpu(res2, gpu_id, ivfpq_cpu, cloner)
 
         for nprobe in self.params.nprobe_values:
             ivfpq_cpu.nprobe = min(nprobe, safe_nlist)

@@ -35,14 +35,15 @@ def get_optimal_params(n: int, dimension: int = 384) -> BenchmarkParams:
         if dimension % m == 0 and m <= max_M_pq
     ]
 
-    if n < 10_000:
-        M_pq = candidates[len(candidates) // 3] if candidates else 16
-    elif n < 100_000:
-        M_pq = candidates[len(candidates) // 2] if candidates else 32
-    elif n < 1_000_000:
-        M_pq = candidates[-1] if candidates else 48
-    else:
-        M_pq = 48 if 48 in candidates else (candidates[-1] if candidates else 48)
+    # if n < 10_000:
+    #     M_pq = candidates[len(candidates) // 3] if candidates else 16
+    # elif n < 100_000:
+    #     M_pq = candidates[len(candidates) // 2] if candidates else 32
+    # elif n < 1_000_000:
+    #     M_pq = candidates[-1] if candidates else 48
+    # else:
+    #     M_pq = 48 if 48 in candidates else (candidates[-1] if candidates else 48)
+    M_pq = 48
 
     if n < 10_000:
         M_hnsw, ef_construction = 16, 100

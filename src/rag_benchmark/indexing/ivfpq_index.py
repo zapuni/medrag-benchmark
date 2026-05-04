@@ -36,7 +36,14 @@ class IVFPQIndexBuilder:
         self._cpu_index.nprobe = min(nprobe, self.nlist)
         if settings.faiss.use_gpu:
             res = faiss.StandardGpuResources()
-            self._gpu_index = faiss.index_cpu_to_gpu(res, settings.faiss.gpu_id, self._cpu_index)
+            cloner = faiss.GpuClonerOptions()
+            cloner.useFloat16 = False
+            self._gpu_index = faiss.index_cpu_to_gpu(
+                res,
+                settings.faiss.gpu_id,
+                self._cpu_index,
+                cloner,
+            )
         return self
 
     def search(self, query: np.ndarray, k: int, nprobe: int | None = None):
@@ -60,5 +67,12 @@ class IVFPQIndexBuilder:
         builder._cpu_index = faiss.read_index(str(path))
         if settings.faiss.use_gpu:
             res = faiss.StandardGpuResources()
-            builder._gpu_index = faiss.index_cpu_to_gpu(res, settings.faiss.gpu_id, builder._cpu_index)
+            cloner = faiss.GpuClonerOptions()
+            cloner.useFloat16 = False
+            builder._gpu_index = faiss.index_cpu_to_gpu(
+                res,
+                settings.faiss.gpu_id,
+                builder._cpu_index,
+                cloner,
+            )
         return builder

@@ -1,55 +1,55 @@
 Loaded 10,000 documents from cache
-Batches:   0%|          | 0/10 [00:00<?, ?it/s]Batches:  10%|█         | 1/10 [00:01<00:15,  1.72s/it]Batches:  20%|██        | 2/10 [00:02<00:10,  1.36s/it]Batches:  30%|███       | 3/10 [00:03<00:08,  1.20s/it]Batches:  40%|████      | 4/10 [00:04<00:06,  1.16s/it]Batches:  50%|█████     | 5/10 [00:06<00:05,  1.14s/it]Batches:  60%|██████    | 6/10 [00:07<00:04,  1.11s/it]Batches:  70%|███████   | 7/10 [00:07<00:03,  1.01s/it]Batches:  80%|████████  | 8/10 [00:08<00:01,  1.03it/s]Batches:  90%|█████████ | 9/10 [00:09<00:00,  1.10it/s]Batches: 100%|██████████| 10/10 [00:09<00:00,  1.34it/s]Batches: 100%|██████████| 10/10 [00:09<00:00,  1.01it/s]
+Batches:   0%|          | 0/10 [00:00<?, ?it/s]Batches:  10%|█         | 1/10 [00:01<00:15,  1.77s/it]Batches:  20%|██        | 2/10 [00:02<00:11,  1.38s/it]Batches:  30%|███       | 3/10 [00:03<00:08,  1.20s/it]Batches:  40%|████      | 4/10 [00:04<00:06,  1.15s/it]Batches:  50%|█████     | 5/10 [00:06<00:05,  1.13s/it]Batches:  60%|██████    | 6/10 [00:07<00:04,  1.10s/it]Batches:  70%|███████   | 7/10 [00:07<00:02,  1.00it/s]Batches:  80%|████████  | 8/10 [00:08<00:01,  1.04it/s]Batches:  90%|█████████ | 9/10 [00:09<00:00,  1.11it/s]Batches: 100%|██████████| 10/10 [00:09<00:00,  1.37it/s]Batches: 100%|██████████| 10/10 [00:09<00:00,  1.01it/s]
 Auto params: nlist=256, nprobe=[1, 4, 8, 16, 32, 64, 128, 256], M_pq=48, nbits=8, M_hnsw=32, efC=200, efS=[16, 32, 64, 128, 256, 512]
 Starting multi-GPU benchmark
 Vectors: 10,000, Queries: 100
 GPU0: Flat + HNSW | GPU1: IVF + IVFPQ
 [GPU0] Computing ground truth (Flat)
-Flat ground truth:   0%|          | 0/1 [00:00<?, ?batch/s]Flat ground truth: 100%|██████████| 1/1 [00:00<00:00, 98.69batch/s]
+Flat ground truth:   0%|          | 0/1 [00:00<?, ?batch/s]Flat ground truth: 100%|██████████| 1/1 [00:00<00:00, 103.41batch/s]
 [GPU1] Ground truth ready, starting IVF
 [GPU1] IVF clustering: 10,000 vectors -> 256 centroids
 [GPU0] Building HNSW M=32, efC=200
 [GPU0] HNSW built in 0.0 min
-HNSW search (ef=16):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=16): 100%|██████████| 1/1 [00:00<00:00, 743.93batch/s]
-HNSW search (ef=32):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=32): 100%|██████████| 1/1 [00:00<00:00, 778.45batch/s]
-HNSW search (ef=64):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=64): 100%|██████████| 1/1 [00:00<00:00, 552.39batch/s]
-HNSW search (ef=128):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=128): 100%|██████████| 1/1 [00:00<00:00, 321.45batch/s]
-HNSW search (ef=256):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=256): 100%|██████████| 1/1 [00:00<00:00, 162.02batch/s]
-HNSW search (ef=512):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=512): 100%|██████████| 1/1 [00:00<00:00, 80.36batch/s]
+HNSW search (ef=16):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=16): 100%|██████████| 1/1 [00:00<00:00, 916.79batch/s]
+HNSW search (ef=32):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=32): 100%|██████████| 1/1 [00:00<00:00, 813.95batch/s]
+HNSW search (ef=64):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=64): 100%|██████████| 1/1 [00:00<00:00, 522.98batch/s]
+HNSW search (ef=128):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=128): 100%|██████████| 1/1 [00:00<00:00, 271.09batch/s]
+HNSW search (ef=256):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=256): 100%|██████████| 1/1 [00:00<00:00, 171.93batch/s]
+HNSW search (ef=512):   0%|          | 0/1 [00:00<?, ?batch/s]HNSW search (ef=512): 100%|██████████| 1/1 [00:00<00:00, 88.76batch/s]
 
-IVF search (nprobe=1):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=1): 100%|██████████| 1/1 [00:00<00:00, 43.74batch/s]
+IVF search (nprobe=1):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=1): 100%|██████████| 1/1 [00:00<00:00, 43.92batch/s]
 
-IVF search (nprobe=4):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=4): 100%|██████████| 1/1 [00:00<00:00, 168.07batch/s]
+IVF search (nprobe=4):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=4): 100%|██████████| 1/1 [00:00<00:00, 170.53batch/s]
 
-IVF search (nprobe=8):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=8): 100%|██████████| 1/1 [00:00<00:00, 271.51batch/s]
+IVF search (nprobe=8):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=8): 100%|██████████| 1/1 [00:00<00:00, 254.79batch/s]
 
-IVF search (nprobe=16):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=16): 100%|██████████| 1/1 [00:00<00:00, 266.22batch/s]
+IVF search (nprobe=16):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=16): 100%|██████████| 1/1 [00:00<00:00, 280.86batch/s]
 
-IVF search (nprobe=32):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=32): 100%|██████████| 1/1 [00:00<00:00, 271.74batch/s]
+IVF search (nprobe=32):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=32): 100%|██████████| 1/1 [00:00<00:00, 326.13batch/s]
 
-IVF search (nprobe=64):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=64): 100%|██████████| 1/1 [00:00<00:00, 128.60batch/s]
+IVF search (nprobe=64):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=64): 100%|██████████| 1/1 [00:00<00:00, 172.47batch/s]
 
-IVF search (nprobe=128):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=128): 100%|██████████| 1/1 [00:00<00:00, 120.05batch/s]
+IVF search (nprobe=128):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=128): 100%|██████████| 1/1 [00:00<00:00, 113.69batch/s]
 
-IVF search (nprobe=256):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=256): 100%|██████████| 1/1 [00:00<00:00, 102.32batch/s]
-[GPU1] IVFPQ clustering: 10,000 vectors -> 256 centroids, M_pq=48
+IVF search (nprobe=256):   0%|          | 0/1 [00:00<?, ?batch/s][AIVF search (nprobe=256): 100%|██████████| 1/1 [00:00<00:00, 110.36batch/s]
+[CPU] IVFPQ training: 10,000 vectors -> 256 centroids, M_pq=48
 
-IVFPQ search (nprobe=1):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=1): 100%|██████████| 1/1 [00:00<00:00, 19.59batch/s]
+IVFPQ search (nprobe=1):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=1): 100%|██████████| 1/1 [00:00<00:00, 17.79batch/s]
 
-IVFPQ search (nprobe=4):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=4): 100%|██████████| 1/1 [00:00<00:00, 191.47batch/s]
+IVFPQ search (nprobe=4):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=4): 100%|██████████| 1/1 [00:00<00:00, 151.98batch/s]
 
-IVFPQ search (nprobe=8):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=8): 100%|██████████| 1/1 [00:00<00:00, 194.21batch/s]
+IVFPQ search (nprobe=8):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=8): 100%|██████████| 1/1 [00:00<00:00, 175.92batch/s]
 
-IVFPQ search (nprobe=16):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=16): 100%|██████████| 1/1 [00:00<00:00, 226.36batch/s]
+IVFPQ search (nprobe=16):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=16): 100%|██████████| 1/1 [00:00<00:00, 172.54batch/s]
 
-IVFPQ search (nprobe=32):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=32): 100%|██████████| 1/1 [00:00<00:00, 166.49batch/s]
+IVFPQ search (nprobe=32):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=32): 100%|██████████| 1/1 [00:00<00:00, 137.40batch/s]
 
-IVFPQ search (nprobe=64):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=64): 100%|██████████| 1/1 [00:00<00:00, 167.50batch/s]
+IVFPQ search (nprobe=64):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=64): 100%|██████████| 1/1 [00:00<00:00, 168.69batch/s]
 
-IVFPQ search (nprobe=128):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=128): 100%|██████████| 1/1 [00:00<00:00, 115.06batch/s]
+IVFPQ search (nprobe=128):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=128): 100%|██████████| 1/1 [00:00<00:00, 139.07batch/s]
 
-IVFPQ search (nprobe=256):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=256): 100%|██████████| 1/1 [00:00<00:00, 84.35batch/s]
-Multi-GPU benchmark complete in 0.2 min
+IVFPQ search (nprobe=256):   0%|          | 0/1 [00:00<?, ?batch/s][AIVFPQ search (nprobe=256): 100%|██████████| 1/1 [00:00<00:00, 108.39batch/s]
+Multi-GPU benchmark complete in 6.7 min
 Saved: results/csv/benchmark_N10000.csv
 Saved chart: results/charts/flat_vs_hnsw_N10000.png
 Saved chart: results/charts/ivf_vs_ivfpq_N10000.png
